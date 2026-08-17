@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Instagram, Facebook, MapPin, Clock, Phone, Mail } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Home() {
@@ -75,10 +75,10 @@ export default function Home() {
             Haven Annecy
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 mb-8">
-            Australian-inspired escape between lake and mountains
+            Australian Brunch & Coffee Shop in the heart of Annecy
           </p>
           <p className="text-lg text-gray-600 mb-12">
-            Brunch and specialty coffee, let's share together a love for flavour and craftsmanship
+            Not Heaven, but pretty close! Between lake and mountains, we believe coffee and food are more than simple pleasures.
           </p>
           <a
             href="#menu"
@@ -104,14 +104,16 @@ export default function Home() {
                 A Taste of Australia in the Heart of Annecy
               </h3>
               <p className="text-lg text-gray-600 mb-6">
-                Haven brings the relaxed, vibrant cafe culture of Australia to Annecy. 
-                Between the lake and mountains, we've created a space where quality coffee, 
-                fresh brunch, and good vibes come together.
+                Haven promises an Australian-inspired escape in Annecy, between lake and mountains, 
+                where passion and people are at the centre of everything.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                We believe coffee and food are more than simple pleasures: they're moments to connect, 
+                to travel differently, and to feel right at home.
               </p>
               <p className="text-lg text-gray-600">
-                Every dish is crafted with care, using locally-sourced ingredients whenever possible. 
-                Our baristas are trained in the Australian coffee tradition, bringing you the perfect 
-                flat white, espresso, or cold brew.
+                Fresh and tasty recipes inspired by the Australian brunch scene. Colourful, generous 
+                and creative plates, prepared with local and seasonal ingredients.
               </p>
             </div>
             <div className="relative h-96 bg-orange-100 rounded-2xl overflow-hidden">
@@ -135,12 +137,12 @@ export default function Home() {
             </h2>
             <div className="w-24 h-1 bg-orange-600 mx-auto mb-4"></div>
             <p className="text-xl text-gray-600">
-              Australian-inspired brunch, specialty coffee, and seasonal specials
+              Aussie vibes in the heart of Annecy — brunch means colourful, generous and creative plates
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Menu Category 1 */}
+            {/* Menu Category 1 - Brunch */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-orange-600 mb-6">Brunch</h3>
               <ul className="space-y-4">
@@ -174,7 +176,7 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Menu Category 2 */}
+            {/* Menu Category 2 - Coffee */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-orange-600 mb-6">Coffee</h3>
               <ul className="space-y-4">
@@ -182,7 +184,7 @@ export default function Home() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h4 className="font-semibold text-gray-900">Flat White</h4>
-                      <p className="text-sm text-gray-600">Double shot, velvety microfoam</p>
+                      <p className="text-sm text-gray-600">Aussie-style, velvety microfoam</p>
                     </div>
                     <span className="text-orange-600 font-semibold">€4.50</span>
                   </div>
@@ -208,7 +210,7 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Menu Category 3 */}
+            {/* Menu Category 3 - Specialties */}
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-orange-600 mb-6">Specialties</h3>
               <ul className="space-y-4">
@@ -279,18 +281,33 @@ export default function Home() {
             <div className="w-24 h-1 bg-orange-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
+            <div className="flex flex-col items-center">
+              <MapPin className="w-8 h-8 text-orange-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Address</h3>
-              <p className="text-gray-300">Annecy, France</p>
+              <p className="text-gray-300">5 rue Filaterie</p>
+              <p className="text-gray-300">74000 Annecy, France</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
+              <Clock className="w-8 h-8 text-orange-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Hours</h3>
-              <p className="text-gray-300">Mon-Fri: 7am - 5pm</p>
-              <p className="text-gray-300">Sat-Sun: 8am - 6pm</p>
+              <p className="text-gray-300">Mon-Fri: 8:00am - 4:00pm</p>
+              <p className="text-gray-300">Saturday: 8:00am - 6:00pm</p>
+              <p className="text-gray-300">Sunday: 8:00am - 2:00pm</p>
+              <p className="text-gray-300 mt-2">Brunch: 9:00am - 2:00pm</p>
             </div>
-            <div>
+            <div className="flex flex-col items-center">
+              <Phone className="w-8 h-8 text-orange-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Contact</h3>
+              <p className="text-gray-300">+33(0) 4 50 51 21 48</p>
               <p className="text-gray-300">hello@haven-annecy.fr</p>
+              <div className="flex gap-4 mt-4">
+                <a href="https://instagram.com" className="text-gray-300 hover:text-orange-600 transition-colors">
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a href="https://facebook.com" className="text-gray-300 hover:text-orange-600 transition-colors">
+                  <Facebook className="w-6 h-6" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -300,6 +317,7 @@ export default function Home() {
       <footer className="bg-black text-white py-8">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p>&copy; 2026 Haven Annecy. All rights reserved.</p>
+          <p className="text-sm text-gray-400 mt-2">Australian Brunch & Coffee Shop in the heart of Annecy</p>
         </div>
       </footer>
     </main>
